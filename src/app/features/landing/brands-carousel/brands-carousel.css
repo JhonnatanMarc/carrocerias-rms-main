@@ -1,0 +1,12 @@
+@keyframes spin {
+  from {
+    translate: 0;
+  }
+  to {
+    translate: -100%;
+  }
+}
+
+.spin {
+  animation: spin 35s infinite linear;
+}

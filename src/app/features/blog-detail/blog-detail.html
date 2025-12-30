@@ -1,0 +1,80 @@
+<section *ngIf="data; else noData" class="max-w-4xl mx-auto py-10">
+
+  <!-- TÍTULO -->
+  <h1 class="text-3xl font-bold mb-4">
+    {{ data.title }}
+  </h1>
+
+  <!-- DESCRIPCIÓN -->
+  <p class="mb-6 text-neutral/70">
+    {{ data.description }}
+  </p>
+
+  <!-- CARACTERÍSTICAS -->
+  @if (data.caracteristicas?.length) {
+    <h3 class="text-xl font-semibold mb-2">Características</h3>
+    <ul class="list-disc pl-6 mb-6">
+      @for (item of data.caracteristicas; track item) {
+        <li>{{ item }}</li>
+      }
+    </ul>
+  }
+
+  <!-- MEDIDAS / CAPACIDADES -->
+  @if (data.medidas?.length) {
+    <h3 class="text-xl font-semibold mb-2">Medidas y Capacidades</h3>
+    <ul class="list-disc pl-6 mb-6">
+      @for (item of data.medidas; track item) {
+        <li>{{ item }}</li>
+      }
+    </ul>
+  }
+
+  <!-- TIPOS -->
+  @if (data.Tipos?.length) {
+    <h3 class="text-xl font-semibold mb-2">Tipos</h3>
+    <ul class="list-disc pl-6 mb-6">
+      @for (item of data.Tipos; track item) {
+        <li>{{ item }}</li>
+      }
+    </ul>
+  }
+
+  <!-- BENEFICIOS -->
+  @if (data.Beneficio?.length) {
+    <h3 class="text-xl font-semibold mb-2">Beneficios</h3>
+    <ul class="list-disc pl-6 mb-6">
+      @for (item of data.Beneficio; track item) {
+        <li>{{ item }}</li>
+      }
+    </ul>
+  }
+
+  <!-- APLICACIONES -->
+  @if (data.Aplicaciones?.length) {
+    <h3 class="text-xl font-semibold mb-2">Aplicaciones</h3>
+    <ul class="list-disc pl-6 mb-6">
+      @for (item of data.Aplicaciones; track item) {
+        <li>{{ item }}</li>
+      }
+    </ul>
+  }
+
+  <!-- OPCIONES -->
+  @if (data.Opciones?.length) {
+    <h3 class="text-xl font-semibold mb-2">Opciones de Personalización</h3>
+    <ul class="list-disc pl-6 mb-6">
+      @for (item of data.Opciones; track item) {
+        <li>{{ item }}</li>
+      }
+    </ul>
+  }
+
+</section>
+
+<!-- SI NO EXISTE INFO -->
+<ng-template #noData>
+  <div class="text-center py-10 text-red-500 font-semibold">
+    No se encontró información para este producto.
+  </div>
+</ng-template>

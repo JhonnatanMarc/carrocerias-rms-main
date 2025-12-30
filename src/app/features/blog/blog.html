@@ -1,0 +1,44 @@
+<section class="w-full py-12 bg-base-100">
+  <div class="w-10/12 mx-auto">
+    <h3 class="mb-10 text-2xl font-bold text-neutral">
+      Blog / Proyectos
+    </h3>
+
+    <div
+      class="grid gap-8
+             grid-cols-1
+             sm:grid-cols-2
+             md:grid-cols-3
+             lg:grid-cols-4"
+    >
+      @for (proyecto of proyectos(); track proyecto.slug) {
+        <div class="flex flex-col items-center text-center">
+          
+          <figure class="relative h-52 w-52 mb-4">
+            <img
+              [ngSrc]="proyecto.img"
+              fill
+              class="object-contain mask mask-circle shadow-lg
+                     hover:scale-105 transition-transform"
+            />
+          </figure>
+
+          <h4 class="text-lg font-bold">
+            {{ proyecto.title }}
+          </h4>
+
+          <span class="text-sm text-bluerms mb-3">
+            {{ proyecto.category }}
+          </span>
+
+          <a
+            [routerLink]="['/blog', proyecto.slug]"
+            class="btn btn-sm bg-bluerms text-white"
+          >
+            Ver más
+          </a>
+        </div>
+      }
+    </div>
+  </div>
+</section>

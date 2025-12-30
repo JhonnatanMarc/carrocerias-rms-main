@@ -1,0 +1,81 @@
+<div
+  class="relative w-full h-[570px] overflow-hidden bg-black"
+  #container
+  (mouseenter)="pauseAutoPlay()"
+  (mouseleave)="resumeAutoPlay()"
+>
+  <!-- Blurred background -->
+  <div
+    class="absolute inset-0 bg-cover bg-center blur-[20px] transform scale-110 opacity-60"
+    [style.background-image]="'url(' + currentSlide().url + ')'"
+  ></div>
+
+  <!-- Main centered image -->
+  <div class="relative w-full h-full z-10">
+    <img
+      [ngSrc]="currentSlide().url"
+      fill
+      [alt]="currentSlide().title"
+      class="object-contain"
+      sizes="100vw"
+      priority
+      fetchpriority="high"
+      (load)="onImageLoad($event)"
+    />
+  </div>
+
+  <!-- Navigation buttons -->
+  <button
+    class="absolute top-1/2 left-3 md:left-5 transform -translate-y-1/2 bg-white/90 border-none w-10 h-10 md:w-12 md:h-12 rounded-full cursor-pointer flex items-center justify-center z-30 transition-all duration-300 text-gray-800 hover:bg-white hover:scale-110 focus:outline-2 focus:outline-white focus:outline-offset-2"
+    (click)="previousSlide()"
+    aria-label="Imagen anterior"
+  >
+    <svg
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+    >
+      <polyline points="15 18 9 12 15 6"></polyline>
+    </svg>
+  </button>
+
+  <button
+    class="absolute top-1/2 right-3 md:right-5 transform -translate-y-1/2 bg-white/90 border-none w-10 h-10 md:w-12 md:h-12 rounded-full cursor-pointer flex items-center justify-center z-30 transition-all duration-300 text-gray-800 hover:bg-white hover:scale-110 focus:outline-2 focus:outline-white focus:outline-offset-2"
+    (click)="nextSlide()"
+    aria-label="Siguiente imagen"
+  >
+    <svg
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+    >
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </button>
+
+  <!-- Side dot textures -->
+  <div
+    class="absolute top-0 w-20 h-full bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2720%27%20height%3D%2720%27%20viewBox%3D%270%200%2020%2020%27%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%3E%3Cg%20fill%3D%27%23ffffff%27%20fill-opacity%3D%270.89%27%20fill-rule%3D%27evenodd%27%3E%3Ccircle%20cx%3D%273%27%20cy%3D%273%27%20r%3D%271.5%27/%3E%3Ccircle%20cx%3D%2713%27%20cy%3D%2713%27%20r%3D%271.5%27/%3E%3C/g%3E%3C/svg%3E')] bg-repeat bg-center z-15"
+    [style.left.px]="imageLeft() - 45"
+    style="
+      mask-image: linear-gradient(to left, black, transparent);
+      -webkit-mask-image: linear-gradient(to left, black, transparent);
+    "
+    aria-hidden="true"
+  ></div>
+  <div
+    class="absolute top-0 w-20 h-full bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2720%27%20height%3D%2720%27%20viewBox%3D%270%200%2020%2020%27%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%3E%3Cg%20fill%3D%27%23ffffff%27%20fill-opacity%3D%270.89%27%20fill-rule%3D%27evenodd%27%3E%3Ccircle%20cx%3D%273%27%20cy%3D%273%27%20r%3D%271.5%27/%3E%3Ccircle%20cx%3D%2713%27%20cy%3D%2713%27%20r%3D%271.5%27/%3E%3C/g%3E%3C/svg%3E')] bg-repeat bg-center z-15"
+    [style.left.px]="imageRight() - 30"
+    style="
+      mask-image: linear-gradient(to right, black, transparent);
+      -webkit-mask-image: linear-gradient(to right, black, transparent);
+    "
+    aria-hidden="true"
+  ></div>
+</div>
