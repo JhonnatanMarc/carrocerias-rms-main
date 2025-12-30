@@ -28,7 +28,7 @@ import type {
   providedIn: 'root'
 })
 export class ProductImagesService {
-  private readonly basePath = '/images/products';
+  private readonly basePath = '/carrocerias-rms-main/assets/imagenes/products';
 
   /**
    * Catálogo completo de productos organizados por categorías
@@ -705,17 +705,17 @@ export class ProductImagesService {
    * @param modelFolderName - Nombre de la carpeta del modelo
    * @param imageFileName - Nombre del archivo de imagen
    * @param subcategoryPath - Ruta de la subcategoría (opcional)
-   * @returns Ruta completa desde /images/products
+   * @returns Ruta completa desde /carrocerias-rms-main/assets/imagenes/products
    *
    * @example
    * ```typescript
    * // Con subcategoría
    * getImagePath('1-brazos-de-izaje', 'brazo-de-izaje-1', 'vista-frontal.webp', 'brazo-de-izaje-carga-pesada-14-20tn')
-   * // => '/images/products/1-brazos-de-izaje/brazo-de-izaje-carga-pesada-14-20tn/brazo-de-izaje-1/vista-frontal.webp'
+   * // => '/carrocerias-rms-main/assets/imagenes/products/1-brazos-de-izaje/brazo-de-izaje-carga-pesada-14-20tn/brazo-de-izaje-1/vista-frontal.webp'
    *
    * // Sin subcategoría
    * getImagePath('10-furgones', 'furgon-1', 'furgon-1.webp')
-   * // => '/images/products/10-furgones/furgon-1/furgon-1.webp'
+   * // => '/carrocerias-rms-main/assets/imagenes/products/10-furgones/furgon-1/furgon-1.webp'
    * ```
    */
   getImagePath(

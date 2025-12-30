@@ -30,103 +30,103 @@ export class SliderComponent implements OnDestroy {
 
   slides = signal<SlideImage[]>([
     {
-      url: '/images/portada/cisterna-6.webp',
+      url: '/carrocerias-rms-main/assets/imagenes/portada/cisterna-6.webp',
       title: 'Cisterna de Vacío',
       width: 1600,
       height: 1200
     },
     {
-      url: '/images/portada/cisterna-de-vacio-1.webp',
+      url: '/carrocerias-rms-main/assets/imagenes/portada/cisterna-de-vacio-1.webp',
       title: 'Cisterna de Vacío',
       width: 1600,
       height: 1200
     },
     {
-      url: '/images/portada/cisterna-de-vacio-2.webp',
+      url: '/carrocerias-rms-main/assets/imagenes/portada/cisterna-de-vacio-2.webp',
       title: 'Cisterna de Vacío',
       width: 1600,
       height: 1200
     },
     {
-      url: '/images/portada/cisterna-de-vacio-3.webp',
+      url: '/carrocerias-rms-main/assets/imagenes/portada/cisterna-de-vacio-3.webp',
       title: 'Cisterna de Vacío',
       width: 1600,
       height: 1200
     },
     {
-      url: '/images/portada/cisterna-de-vacio-4-b.webp',
+      url: '/carrocerias-rms-main/assets/imagenes/portada/cisterna-de-vacio-4-b.webp',
       title: 'Cisterna de Vacío',
       width: 1600,
       height: 1200
     },
     {
-      url: '/images/portada/cisterna-de-vacio-4.webp',
+      url: '/carrocerias-rms-main/assets/imagenes/portada/cisterna-de-vacio-4.webp',
       title: 'Cisterna de Vacío',
       width: 1600,
       height: 1200
     },
     {
-      url: '/images/portada/cisterna-de-vacio-5.webp',
+      url: '/carrocerias-rms-main/assets/imagenes/portada/cisterna-de-vacio-5.webp',
       title: 'Cisterna de Vacío',
       width: 1600,
       height: 1200
     },
     {
-      url: '/images/portada/contenedor-1.webp',
+      url: '/carrocerias-rms-main/assets/imagenes/portada/contenedor-1.webp',
       title: 'Contenedor',
       width: 1600,
       height: 1200
     },
     {
-      url: '/images/portada/contenedor-2.webp',
+      url: '/carrocerias-rms-main/assets/imagenes/portada/contenedor-2.webp',
       title: 'Contenedor',
       width: 1600,
       height: 1200
     },
     {
-      url: '/images/portada/contenedor-3.webp',
+      url: '/carrocerias-rms-main/assets/imagenes/portada/contenedor-3.webp',
       title: 'Contenedor',
       width: 1600,
       height: 1200
     },
     {
-      url: '/images/portada/contenedor-4.webp',
+      url: '/carrocerias-rms-main/assets/imagenes/portada/contenedor-4.webp',
       title: 'Contenedor',
       width: 1600,
       height: 1200
     },
     {
-      url: '/images/portada/contenedor-5.webp',
+      url: '/carrocerias-rms-main/assets/imagenes/portada/contenedor-5.webp',
       title: 'Contenedor',
       width: 1600,
       height: 1200
     },
     {
-      url: '/images/portada/semirremolque-plataforma-1.webp',
+      url: '/carrocerias-rms-main/assets/imagenes/portada/semirremolque-plataforma-1.webp',
       title: 'Semirremolque Plataforma',
       width: 1600,
       height: 1200
     },
     {
-      url: '/images/portada/semirremolque-plataforma-2.webp',
+      url: '/carrocerias-rms-main/assets/imagenes/portada/semirremolque-plataforma-2.webp',
       title: 'Semirremolque Plataforma',
       width: 1600,
       height: 1200
     },
     {
-      url: '/images/portada/semirremolque-plataforma-3.webp',
+      url: '/carrocerias-rms-main/assets/imagenes/portada/semirremolque-plataforma-3.webp',
       title: 'Semirremolque Plataforma',
       width: 1600,
       height: 1200
     },
     {
-      url: '/images/portada/semirremolque-plataforma-4.webp',
+      url: '/carrocerias-rms-main/assets/imagenes/portada/semirremolque-plataforma-4.webp',
       title: 'Semirremolque Plataforma',
       width: 1600,
       height: 1200
     },
     {
-      url: '/images/portada/semirremolque-plataforma-5.webp',
+      url: '/carrocerias-rms-main/assets/imagenes/portada/semirremolque-plataforma-5.webp',
       title: 'Semirremolque Plataforma',
       width: 1600,
       height: 1200

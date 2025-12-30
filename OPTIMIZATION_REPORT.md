@@ -247,7 +247,7 @@ Ejemplo:
 
 ```bash
 # Convertir todas las imágenes a WebP
-for img in src/assets/images/**/*.jpg; do
+for img in src/assets/carrocerias-rms-main/assets/imagenes/**/*.jpg; do
   cwebp -q 80 "$img" -o "${img%.jpg}.webp"
 done
 ```

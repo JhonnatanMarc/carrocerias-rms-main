@@ -34,13 +34,13 @@ export class BrandsCarouselComponent implements OnInit, OnDestroy {
   private isVisible = signal(false);
 
   readonly brands = signal<Brand[]>([
-    { name: 'Mercedes-Benz', logo: '/images/slider/marcas/mercedes-benz.png' },
-    { name: 'Volvo', logo: '/images/slider/marcas/volvo.png' },
-    { name: 'Volkswagen', logo: '/images/slider/marcas/volkswagen.png' },
-    { name: 'Iveco', logo: '/images/slider/marcas/iveco.png' },
-    { name: 'Isuzu', logo: '/images/slider/marcas/isuzu.png' },
-    { name: 'JMC', logo: '/images/slider/marcas/jmc_motor.png' },
-    { name: 'Toyota', logo: '/images/slider/marcas/toyota.png' }
+    { name: 'Mercedes-Benz', logo: '/carrocerias-rms-main/assets/imagenes/slider/marcas/mercedes-benz.png' },
+    { name: 'Volvo', logo: '/carrocerias-rms-main/assets/imagenes/slider/marcas/volvo.png' },
+    { name: 'Volkswagen', logo: '/carrocerias-rms-main/assets/imagenes/slider/marcas/volkswagen.png' },
+    { name: 'Iveco', logo: '/carrocerias-rms-main/assets/imagenes/slider/marcas/iveco.png' },
+    { name: 'Isuzu', logo: '/carrocerias-rms-main/assets/imagenes/slider/marcas/isuzu.png' },
+    { name: 'JMC', logo: '/carrocerias-rms-main/assets/imagenes/slider/marcas/jmc_motor.png' },
+    { name: 'Toyota', logo: '/carrocerias-rms-main/assets/imagenes/slider/marcas/toyota.png' }
   ]);
 
   readonly currentIndex = signal(0);
